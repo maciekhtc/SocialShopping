@@ -65,6 +65,26 @@ public partial class SiteMaster : MasterPage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        Label1.Text = (string)Session["User_Username"] + " " + (string)Session["User_Id"];
+        if (Session["User_Id"] != null)
+        {
+            anonymousPanel.Visible = false;
+            loggedinPanel.Visible = true;
+            userLogin.Text = "Profil: " + (string)Session["User_Username"];
+        }
+        else
+        {
+            anonymousPanel.Visible = true;
+            loggedinPanel.Visible = false;
+        }
+    }
+    protected void profileLinkButton_Click(object sender, EventArgs e)
+    {
+        Page.Response.Redirect("~/Account/Profile.aspx");
+    }
+    protected void logoutLinkButton_Click(object sender, EventArgs e)
+    {
+        Session["User_Id"] = null;
+        Session["User_Username"] = null;
+        Page.Response.Redirect("~/Default.aspx");
     }
 }

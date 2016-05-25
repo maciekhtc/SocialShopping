@@ -44,23 +44,18 @@
             </div>
             <div class="float-right">
                 <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register">Zarejestruj</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login">Zaloguj</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" />
-                                </a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
-                            </p>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <asp:Panel ID="anonymousPanel" Visible="true" runat="server">
+                        <ul>
+                            <li><a id="registerLink" runat="server" href="~/Account/Register">Zarejestruj</a></li>
+                            <li><a id="loginLink" runat="server" href="~/Account/Login">Zaloguj</a></li>
+                        </ul>
+                    </asp:Panel>
+                    <asp:Panel ID="loggedinPanel" Visible="false" runat="server">
+                        <ul>
+                            <li><asp:LinkButton ID="profileLinkButton" runat="server" OnClick="profileLinkButton_Click"><asp:Label ID="userLogin" runat="server" Text="Label"></asp:Label></asp:LinkButton></li>
+                            <li><asp:LinkButton ID="logoutLinkButton" runat="server" OnClick="logoutLinkButton_Click">Wyloguj</asp:LinkButton></li>
+                        </ul>
+                    </asp:Panel>
                 </section>
                 <nav>
                     <ul id="menu">
