@@ -59,9 +59,9 @@
                 </section>
                 <nav>
                     <ul id="menu">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/">Strona Główna</a></li>
+                        <li><a runat="server" href="~/About">O Aplikacji</a></li>
+                        <li><a runat="server" href="~/Contact">Kontakt</a></li>
                     </ul>
                 </nav>
             </div>

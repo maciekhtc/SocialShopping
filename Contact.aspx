@@ -1,22 +1,18 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
+﻿<%@ Page Title="Kontakt" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
         <h1><%: Title %>.</h1>
-        <h2>Your contact page.</h2>
+        <h2>Moja strona kontaktowa</h2>
     </hgroup>
 
     <section class="contact">
         <header>
-            <h3>Phone:</h3>
+            <h3>Telefon:</h3>
         </header>
         <p>
             <span class="label">Main:</span>
-            <span>425.555.0100</span>
-        </p>
-        <p>
-            <span class="label">After Hours:</span>
-            <span>425.555.0199</span>
+            <span>787995###</span>
         </p>
     </section>
 
@@ -25,26 +21,22 @@
             <h3>Email:</h3>
         </header>
         <p>
-            <span class="label">Support:</span>
-            <span><a href="mailto:Support@example.com">Support@example.com</a></span>
+            <span class="label">Wsparcie:</span>
+            <span><a href="mailto:bjfbjf@wp.pl">bjfbjf@wp.pl</a></span>
         </p>
         <p>
-            <span class="label">Marketing:</span>
-            <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-        </p>
-        <p>
-            <span class="label">General:</span>
-            <span><a href="mailto:General@example.com">General@example.com</a></span>
+            <span class="label">Ogólny:</span>
+            <span><a href="mailto:bjfbjf@wp.pl">bjfbjf@wp.pl</a></span>
         </p>
     </section>
 
     <section class="contact">
         <header>
-            <h3>Address:</h3>
+            <h3>Adres:</h3>
         </header>
         <p>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399
+            Polska, Elbląg 82-300<br />
+            ul. ########## ##/#
         </p>
     </section>
 </asp:Content>
