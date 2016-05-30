@@ -15,11 +15,11 @@
                 Sprawdź listę paragonów, które nie zostały Ci spłacone przez wszystkie osoby.
             </li>
             <li class="three">
-                <h5><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Bills.aspx">Lista Cudzych Paragonów</asp:HyperLink></h5>
+                <h5><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/BillsParticipated.aspx">Lista Cudzych Paragonów</asp:HyperLink></h5>
                 Sprawdź listę paragonów, w których uczestniczyłeś i jeszcze ich nie spłaciłeś.
             </li>
             <li class="four">
-                <h5><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Bills.aspx">Historia Paragonów</asp:HyperLink></h5>
+                <h5><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/BillsHistory.aspx">Historia Paragonów</asp:HyperLink></h5>
                 Przeglądaj listę swoich paragonów oraz cudzych, w których uczestniczyłeś.
             </li>
         </ol>

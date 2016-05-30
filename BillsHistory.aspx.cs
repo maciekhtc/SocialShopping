@@ -11,8 +11,4 @@ public partial class Default2 : System.Web.UI.Page
     {
         if (Session["User_Id"] == null) Page.Response.Redirect("~/Account/Login.aspx");
     }
-    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        Page.Response.Redirect("~/BillDetails.aspx?bill=" + GridView1.SelectedRow.Cells[0].Text);
-    }
 }
