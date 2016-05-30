@@ -17,12 +17,12 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <ol class="round">
         <li class="one">
-            <h5>Zarejestruj</h5>
+            <h5><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account/Register.aspx">Zarejestruj</asp:HyperLink></h5>
             Stwórz swoje własne konto i rozliczaj się ze znajomymi już dziś!
         </li>
         <li class="two">
-            <h5>Zaloguj</h5>
-            Odwiedź serwis, aby wyświetlić zalegających z płatnościami znajomych lub swoje własne zobowiązania.
+            <h5><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Account/Login.aspx">Zaloguj</asp:HyperLink></h5>
+            Wyświetl zalegających z płatnościami oraz własne zobowiązania.
         </li>
         <li class="three">
             <h5>Dodaj</h5>
