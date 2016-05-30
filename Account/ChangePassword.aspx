@@ -11,17 +11,20 @@
     </p> 
     <p>
         Obecne Hasło: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="password0TextBox" runat="server" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Musisz podac Hasło!" ControlToValidate="password0TextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
     </p>
     <p>
         Nowe Hasło: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="password1TextBox" runat="server" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Musisz podac nowe Hasło!" ControlToValidate="password1TextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="password1TextBox" Display="Dynamic" ErrorMessage="Hasło musi się składać z conajmniej 8 znaków i musi rozpoczynać się wielką literą!" ForeColor="Red" ValidationExpression="[A-Z]([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])+"></asp:RegularExpressionValidator>
     </p>
     <p>
         Powtórz Hasło: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="password2TextBox" runat="server" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Musisz Powtórzyć Hasło!" ControlToValidate="password2TextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="password1TextBox" ControlToValidate="password2TextBox" ErrorMessage="Powtórzone Hasło musi być zgodne z pierwotnym!" ForeColor="Red" Display="Dynamic"></asp:CompareValidator>

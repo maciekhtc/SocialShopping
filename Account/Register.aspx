@@ -11,33 +11,39 @@
     </p>
     <p>
         Login: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="loginTextBox" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Musisz podac Login!" ControlToValidate="loginTextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
     </p>
     <p>
         Hasło: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="password1TextBox" runat="server" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Musisz podac Hasło!" ControlToValidate="password1TextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="password1TextBox" Display="Dynamic" ErrorMessage="Hasło musi się składać z conajmniej 8 znaków i musi rozpoczynać się wielką literą!" ForeColor="Red" ValidationExpression="[A-Z]([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])([A-z]|[0-9])+"></asp:RegularExpressionValidator>
     </p>
     <p>
         Powtórz Hasło: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="password2TextBox" runat="server" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Musisz Powtórzyć Hasło!" ControlToValidate="password2TextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="password1TextBox" ControlToValidate="password2TextBox" ErrorMessage="Powtórzone Hasło musi być zgodne z pierwotnym!" ForeColor="Red" Display="Dynamic"></asp:CompareValidator>
     </p>
     <p>
         Imię: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="imieTextBox" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Musisz podac Imię!" ControlToValidate="imieTextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
     </p>
     <p>
         Nazwisko: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="nazwiskoTextBox" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Musisz podac Nazwisko!" ControlToValidate="nazwiskoTextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
     </p>
     <p>
         Adres e-mail: <br />
+        &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="emailTextBox" runat="server" TextMode="Email"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Musisz podac Adres e-mail!" ControlToValidate="emailTextBox" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="Dynamic" ControlToValidate="emailTextBox" ErrorMessage="Podany e-mail nie jest prawidłowy!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
