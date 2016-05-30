@@ -14,7 +14,6 @@
             <asp:CommandField SelectText="Szczegóły" ShowSelectButton="True" />
         </Columns>
     </asp:GridView>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sieradzkiConnectionString %>" SelectCommand="SELECT description, total_cost, timestamp, id_bill FROM BILLS WHERE (owner_id = @owner_id
 AND id_bill IN (SELECT bill_id FROM USER_BILL WHERE is_paid=0))">
         <SelectParameters>
