@@ -15,6 +15,7 @@
             </asp:BoundField>
             <asp:BoundField DataField="total_cost" HeaderText="Wartość" SortExpression="total_cost" >
             <HeaderStyle HorizontalAlign="Center" />
+            <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły" />
         </Columns>
