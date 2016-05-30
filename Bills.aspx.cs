@@ -9,7 +9,7 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["User_Id"] == null) Page.Response.Redirect("~/Account/Login.aspx");
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
