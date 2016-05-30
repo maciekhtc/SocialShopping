@@ -6,7 +6,7 @@
     </hgroup>
 
     <h2>Twoje Paragony</h2>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="505px" DataKeyNames="id_bill" AllowSorting="True">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="600px" DataKeyNames="id_bill" AllowSorting="True" EmptyDataText="Brak wpisów.">
         <Columns>
             <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" ShowHeader="False" SortExpression="id_bill" Visible="False">
             <ItemStyle Width="0%" />
@@ -26,7 +26,7 @@
     </asp:GridView>
 
     <h2>Cudze Paragony</h2>
-    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="505px">
+    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="600px" EmptyDataText="Brak wpisów.">
         <Columns>
             <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" SortExpression="id_bill" Visible="False" />
             <asp:BoundField DataField="description" HeaderText="Opis zakupu" SortExpression="description">
@@ -41,6 +41,7 @@
             <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły">
             <ItemStyle HorizontalAlign="Center" />
             </asp:HyperLinkField>
+            <asp:HyperLinkField DataNavigateUrlFields="nickname" DataNavigateUrlFormatString="UserDetails.aspx?nickname={0}" ShowHeader="False" Text="Kontakt" />
         </Columns>
     </asp:GridView>
 
