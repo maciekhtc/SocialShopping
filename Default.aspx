@@ -15,7 +15,6 @@
 </asp:Content>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h3>Twoje możliwości:</h3>
     <ol class="round">
         <li class="one">
             <h5>Zarejestruj</h5>
