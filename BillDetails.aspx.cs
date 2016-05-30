@@ -12,10 +12,10 @@ public partial class Default2 : System.Web.UI.Page
     {
         if (Session["User_Id"] == null) Page.Response.Redirect("~/Account/Login.aspx");
         if (Request.QueryString["bill"] == null) Page.Response.Redirect("~/Bills.aspx");
-        //DataView dv = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
-        //if (dv.Table.Rows.Count == 0) Page.Response.Redirect("~/Bills.aspx");
-        long bill = long.Parse(Request.QueryString["bill"]);
-        Label1.Text = bill + "";
+        DataView dv = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
+        owner.Text = (string)dv.Table.Rows[0][0];
+        price.Text = (dv.Table.Rows[0][1] + "").Substring(0, (dv.Table.Rows[0][1] + "").Length - 2);
+        description.Text = (string)dv.Table.Rows[0][3];
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {

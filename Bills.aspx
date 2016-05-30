@@ -1,17 +1,22 @@
-﻿<%@ Page Title="Paragony" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Bills.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="Niespłacone Paragony" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Bills.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" Runat="Server">
-
+    <hgroup class="title">
+        <h1><%: Title %></h1>
+    </hgroup>
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="505px" DataKeyNames="id_bill">
         <Columns>
-            <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" ShowHeader="False" SortExpression="id_bill">
+            <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" ShowHeader="False" SortExpression="id_bill" Visible="False">
             <ItemStyle Width="0%" />
             </asp:BoundField>
             <asp:BoundField DataField="description" HeaderText="Opis zakupu" SortExpression="description">
+            <HeaderStyle HorizontalAlign="Center" />
             <ItemStyle Width="60%" />
             </asp:BoundField>
-            <asp:BoundField DataField="total_cost" HeaderText="Wartość" SortExpression="total_cost" />
-            <asp:CommandField SelectText="Szczegóły" ShowSelectButton="True" />
+            <asp:BoundField DataField="total_cost" HeaderText="Wartość" SortExpression="total_cost" >
+            <HeaderStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły" />
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sieradzkiConnectionString %>" SelectCommand="SELECT description, total_cost, timestamp, id_bill FROM BILLS WHERE (owner_id = @owner_id
