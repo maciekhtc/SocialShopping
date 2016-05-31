@@ -15,6 +15,7 @@ public partial class Default2 : System.Web.UI.Page
         DataView dv = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
         owner.Text = (string)dv.Table.Rows[0][0];
         price.Text = (dv.Table.Rows[0][1] + "").Substring(0, (dv.Table.Rows[0][1] + "").Length - 2);
+        timestamp.Text = ((DateTime)dv.Table.Rows[0][2]).ToString();
         description.Text = (string)dv.Table.Rows[0][3];
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

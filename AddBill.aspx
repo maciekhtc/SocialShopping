@@ -27,9 +27,8 @@
 
     </p>
     <p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sieradzkiConnectionString %>" InsertCommand="INSERT INTO BILLS(owner_id, total_cost, description) 
-VALUES (@owner_id, @total_cost, @description)
-SET @newId=SCOPE_IDENTITY()" SelectCommand="SELECT * FROM [USER_BILL]" OnInserted="SqlDataSource1_Inserted">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sieradzkiConnectionString %>" InsertCommand="INSERT INTO BILLS(owner_id, total_cost, description, timestamp) VALUES (@owner_id, @total_cost, @description, CURRENT_TIMESTAMP)
+ SET @newId=SCOPE_IDENTITY()" SelectCommand="SELECT * FROM [USER_BILL]" OnInserted="SqlDataSource1_Inserted">
             <InsertParameters>
                 <asp:SessionParameter Name="owner_id" SessionField="User_Id" />
                 <asp:ControlParameter ControlID="totalcostTextBox" Name="total_cost" PropertyName="Text" />

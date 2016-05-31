@@ -11,12 +11,15 @@
             </asp:BoundField>
             <asp:BoundField DataField="description" HeaderText="Opis zakupu" SortExpression="description">
             <HeaderStyle HorizontalAlign="Center" />
-            <ItemStyle Width="60%" />
+            <ItemStyle Width="50%" />
             </asp:BoundField>
             <asp:BoundField DataField="total_cost" HeaderText="Wartość" SortExpression="total_cost" >
-            <HeaderStyle HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
+            <ItemStyle HorizontalAlign="Center" Width="15%" />
             </asp:BoundField>
+            <asp:DynamicField DataField="timestamp" HeaderText="Data">
+            <HeaderStyle HorizontalAlign="Center" />
+            <ItemStyle HorizontalAlign="Center" Width="30%" />
+            </asp:DynamicField>
             <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły" />
         </Columns>
     </asp:GridView>

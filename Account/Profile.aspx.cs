@@ -18,7 +18,7 @@ public partial class Default2 : System.Web.UI.Page
                 loginLabel.Text = (string)dv.Table.Rows[0][0];
                 imieLabel.Text = (string)dv.Table.Rows[0][1];
                 nazwiskoLabel.Text = (string)dv.Table.Rows[0][2];
-                //dataLabel.Text = DateTime.FromBinary(((long)dv.Table.Rows[0][3])).ToString(); //niemożliwe ze względu na nieprawidłowy projekt bazy danych (zły typ danych) (dodac potem do rejestracji)
+                dataLabel.Text = ((DateTime)dv.Table.Rows[0][3]).ToString();
                 emailLabel.Text = (string)dv.Table.Rows[0][4];
             }
         }

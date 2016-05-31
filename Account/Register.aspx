@@ -55,7 +55,7 @@
         <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" NavigateUrl="~/Account/Login.aspx">Zaloguj</asp:HyperLink>
         się jeśli posiadasz już konto.
     </p>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sieradzkiConnectionString %>" SelectCommand="SELECT [nickname] FROM [USERS] WHERE ([nickname] = @nickname)" InsertCommand="INSERT INTO USERS(nickname, password, first_name, last_name, email) VALUES (@nickname, @password, @first_name, @last_name, @email)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sieradzkiConnectionString %>" SelectCommand="SELECT [nickname] FROM [USERS] WHERE ([nickname] = @nickname)" InsertCommand="INSERT INTO USERS(nickname, password, first_name, last_name, email, join_timestamp) VALUES (@nickname, @password, @first_name, @last_name, @email, CURRENT_TIMESTAMP)">
         <InsertParameters>
             <asp:ControlParameter ControlID="loginTextBox" Name="nickname" PropertyName="Text" />
             <asp:ControlParameter ControlID="password1TextBox" Name="password" PropertyName="Text" />

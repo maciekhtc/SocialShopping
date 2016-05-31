@@ -16,7 +16,7 @@ public partial class Default2 : System.Web.UI.Page
         nickLabel.Text = (string)dv.Table.Rows[0][0];
         imieLabel.Text = (string)dv.Table.Rows[0][1];
         nazwiskoLabel.Text = (string)dv.Table.Rows[0][2];
-        //joinDateLabel.Text = ((DateTime)dv.Table.Rows[0][4]).ToString();
+        joinDateLabel.Text = ((DateTime)dv.Table.Rows[0][3]).ToString();
         emailLabel.Text = (string)dv.Table.Rows[0][4];
         emailHyperlink.NavigateUrl = "mailto:" + emailLabel.Text;
     }

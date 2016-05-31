@@ -14,13 +14,17 @@
             <asp:BoundField DataField="nickname" HeaderText="Właściciel" SortExpression="nickname">
             <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
+            <asp:HyperLinkField DataNavigateUrlFields="nickname" DataNavigateUrlFormatString="UserDetails.aspx?nickname={0}" ShowHeader="False" Text="Kontakt" />
             <asp:BoundField DataField="total_cost" HeaderText="Wartość" SortExpression="total_cost">
             <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="timestamp" HeaderText="Data" SortExpression="timestamp">
+            <HeaderStyle HorizontalAlign="Center" />
+            <ItemStyle HorizontalAlign="Center" Width="35%" />
             </asp:BoundField>
             <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły">
             <ItemStyle HorizontalAlign="Center" />
             </asp:HyperLinkField>
-            <asp:HyperLinkField DataNavigateUrlFields="nickname" DataNavigateUrlFormatString="UserDetails.aspx?nickname={0}" ShowHeader="False" Text="Kontakt" />
         </Columns>
     </asp:GridView>
 
