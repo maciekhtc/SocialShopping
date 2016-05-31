@@ -5,7 +5,7 @@
         <h1><%: Title %></h1>
     </hgroup>
 
-    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="600px">
+    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="100%">
         <Columns>
             <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" SortExpression="id_bill" Visible="False" />
             <asp:BoundField DataField="description" HeaderText="Opis zakupu" SortExpression="description">
@@ -19,8 +19,7 @@
             <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:BoundField DataField="timestamp" HeaderText="Data" SortExpression="timestamp">
-            <HeaderStyle HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" Width="35%" />
+            <ItemStyle HorizontalAlign="Center" Width="40%" />
             </asp:BoundField>
             <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły">
             <ItemStyle HorizontalAlign="Center" />

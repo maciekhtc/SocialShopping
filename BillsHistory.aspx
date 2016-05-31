@@ -6,7 +6,7 @@
     </hgroup>
 
     <h2>Twoje Paragony</h2>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="600px" DataKeyNames="id_bill" AllowSorting="True" EmptyDataText="Brak wpisów.">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" DataKeyNames="id_bill" AllowSorting="True" EmptyDataText="Brak wpisów.">
         <Columns>
             <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" ShowHeader="False" SortExpression="id_bill" Visible="False">
             <ItemStyle Width="0%" />
@@ -21,7 +21,7 @@
             </asp:BoundField>
             <asp:BoundField DataField="timestamp" HeaderText="Data" SortExpression="timestamp">
             <HeaderStyle HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" Width="30%" />
+            <ItemStyle Width="30%" />
             </asp:BoundField>
             <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły" >
             <ItemStyle HorizontalAlign="Center" />
@@ -30,7 +30,7 @@
     </asp:GridView>
 
     <h2>Cudze Paragony</h2>
-    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="600px" EmptyDataText="Brak wpisów.">
+    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="100%" EmptyDataText="Brak wpisów.">
         <Columns>
             <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" SortExpression="id_bill" Visible="False" />
             <asp:BoundField DataField="description" HeaderText="Opis zakupu" SortExpression="description">
@@ -44,7 +44,8 @@
             <ItemStyle HorizontalAlign="Center" Width="15%" />
             </asp:BoundField>
             <asp:BoundField DataField="timestamp" HeaderText="Data" SortExpression="timestamp">
-            <ItemStyle Width="35%" />
+            <HeaderStyle HorizontalAlign="Center" />
+            <ItemStyle Width="40%" />
             </asp:BoundField>
             <asp:HyperLinkField DataNavigateUrlFields="id_bill" DataNavigateUrlFormatString="BillDetails.aspx?bill={0}" Text="Szczegóły">
             <ItemStyle HorizontalAlign="Center" Width="0%" />
