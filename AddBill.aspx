@@ -22,7 +22,7 @@
     </p>
     <h3>Uczestnicy</h3>
     <p>
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="Brak wpisów." Width="320px">
+        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="Brak wpisów." Width="320px" BorderStyle="Dashed" BorderWidth="1px">
             <Columns>
                 <asp:BoundField DataField="nickname" HeaderText="Nazwa Użytkownika" SortExpression="nickname" />
             </Columns>

@@ -19,7 +19,7 @@
         <h3>Lista Uczestników</h3>
         <asp:Label ID="userNotOwner" runat="server" Visible="false" Text="Nie jesteś właścicielem tego paragonu, nie możesz zatwierdzać spłat!" ForeColor="Red"></asp:Label>
     </p>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%" EmptyDataText="Brak wpisów.">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%" EmptyDataText="Brak wpisów." BorderStyle="Dashed" BorderWidth="1px">
         <Columns>
             <asp:BoundField DataField="nickname" HeaderText="Uczestnik " SortExpression="nickname">
             <HeaderStyle HorizontalAlign="Center" />

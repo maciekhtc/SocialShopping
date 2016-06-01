@@ -4,7 +4,7 @@
     <hgroup class="title">
         <h1><%: Title %></h1>
     </hgroup>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" DataKeyNames="id_bill" AllowSorting="True" EmptyDataText="Brak wpisów.">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" DataKeyNames="id_bill" AllowSorting="True" EmptyDataText="Brak wpisów." BorderStyle="Dashed" BorderWidth="1px">
         <Columns>
             <asp:BoundField DataField="id_bill" HeaderText="Nr" InsertVisible="False" ReadOnly="True" ShowHeader="False" SortExpression="id_bill" Visible="False">
             <ItemStyle Width="0%" />
