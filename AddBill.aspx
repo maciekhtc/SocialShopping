@@ -4,6 +4,7 @@
     <hgroup class="title">
         <h1><%: Title %></h1>
     </hgroup>
+    <section id="loginForm">
     <asp:Label ID="Label1" runat="server" Text="0" Visible="false"></asp:Label>
     <p>
         Opis:
@@ -76,5 +77,9 @@ WHERE ([USER_BILL].bill_id = CAST(@bill_id AS BIGINT))" OnInserted="SqlDataSourc
             </SelectParameters>
         </asp:SqlDataSource>
     </p>
+    </section>
+    <section id="Section1">
+        <img src="reklama.png"/>
+    </section>
 </asp:Content>
 

@@ -5,7 +5,7 @@
         <h1><%: Title %>:</h1>
         <h2><asp:Label ID="nickLabel" runat="server" Text=""></asp:Label></h2>
     </hgroup>
-    
+    <section id="loginForm">
     <p>
         Imię: <br />
         &nbsp;&nbsp;&nbsp;
@@ -31,6 +31,9 @@
             <asp:QueryStringParameter Name="nickname" QueryStringField="nickname" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
-
+    </section>
+    <section id="Section1">
+        <img src="reklama.png"/>
+    </section>
 </asp:Content>
 

@@ -15,6 +15,7 @@
 </asp:Content>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <section id="loginForm"> 
     <ol class="round">
         <li class="one">
             <h5><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account/Register.aspx">Zarejestruj</asp:HyperLink></h5>
@@ -33,4 +34,8 @@
             Odznacz dowolną osobę przy rachunku, gdy otrzymasz zapłatę.
         </li>
     </ol>
+    </section>
+    <section id="Section1">
+        <img src="reklama.png"/>
+    </section>
 </asp:Content>

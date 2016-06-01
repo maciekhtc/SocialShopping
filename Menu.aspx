@@ -25,7 +25,7 @@
         </ol>
     </section>
     <section id="Section1">
-        cos bedzie
+        <img src="reklama.png"/>
     </section>
 </asp:Content>
 

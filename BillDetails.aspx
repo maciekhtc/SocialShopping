@@ -15,8 +15,8 @@
         &nbsp;&nbsp;&nbsp;
         <asp:Label ID="description" runat="server" Text=""></asp:Label>
     </p>
+    <h3>Lista Uczestników</h3>
     <p>
-        <h3>Lista Uczestników</h3>
         <asp:Label ID="userNotOwner" runat="server" Visible="false" Text="Nie jesteś właścicielem tego paragonu, nie możesz zatwierdzać spłat!" ForeColor="Red"></asp:Label>
     </p>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%" EmptyDataText="Brak wpisów." BorderStyle="Dashed" BorderWidth="1px">
